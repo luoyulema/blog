@@ -1,0 +1,39 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>你好</title>
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap-theme.css'%}">
+	<style src="{% static 'js/bootstrap.min.js'%}"></style>
+	<style src="{% static 'js/jquery-3.1.0.js'%}"></style>
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body background="{%static 'images/background.jpg'%}">
+	<div class="back-container center">
+		<div class="img-container center grad">
+			<img src="{%static 'images/luohua.jpg'%}" alt="" class="center">
+			<div class="left-affix grad">
+				<p>个人资料</p>
+				<img src="{%static 'images/180.jpg'%}" alt="">
+				<div class="introduce"><p>姓名</p>
+					<p>星座</p>
+					<p>主页</p>
+					<p>职业</p></div>
+			</div>
+			<div class="classify grad">
+				<ul class="nav nav-pills nav-stacked">
+					<li><a href="#" class="">情感天地<span></span></a></li>
+					<li><a href="#" class="">升级打怪</a></li>
+					<li><a href="#">好货推荐</a></li>
+				</ul>
+			</div>
+			<div class="text-area">
+				{%block content%}
+				{%endblock%}
+			</div>
+		</div>
+	</div>
+</body>
+</html>
